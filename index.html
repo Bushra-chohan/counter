@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="app">
+        <div class="heading">Counter</div>
+        <div id="counter"></div>
+        <div>
+            <button class="decreaseBtn" onclick="clickButton('Decrease')">Decrease</button>
+            <button class="resetBtn" onclick="clickButton('Reset')">Reset</button>
+            <button class="increaseBtn" onclick="clickButton('Increase')">Increase</button>
+        </div>
+    </section>
+
+    <script>
+
+        let num = 0;
+
+        function clickButton(buttonName){
+            if(buttonName == 'Decrease'){
+                num -=1 
+                document.getElementById('counter').innerHTML = num
+            } else if(buttonName == 'Increase'){
+                num +=1
+                document.getElementById('counter').innerHTML = num
+            } else if(buttonName == 'Reset'){
+                num = 0
+                document.getElementById('counter').innerHTML = num
+            }
+        }
+        
+    </script>
+</body>
+</html>
